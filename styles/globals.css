@@ -9,18 +9,22 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+  display: block;
 }
 
 * {
   box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+ul,ol,li{
+  list-style: none;
+}
+
+button{
+  display: block;
+  background-color: none;
+}
+
+button:focus{
+  border:none
 }
