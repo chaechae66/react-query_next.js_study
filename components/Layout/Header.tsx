@@ -1,23 +1,24 @@
 import { useRouter } from "next/router"
 import React from "react";
+import ActiveLink from "../common/ActiveLink";
 
 export default function Header(){
     const router = useRouter();
 
     const goToHome = () => {
-        // router
+        router.push("/")
     }
 
     const goToAbout = () => {
-        
+        router.push("/about")
     }
 
     return(
         <>
             <div>
                 <header>
-                    <h2 onClick={goToHome}>로고</h2>
-                    <h2 onClick={goToAbout}>공지</h2>
+                    <ActiveLink href="/">화장품</ActiveLink>
+                    <ActiveLink href="/about">소개</ActiveLink>
                 </header>
             </div>
             <style jsx>{`
@@ -35,10 +36,12 @@ export default function Header(){
                     align-items: center;
                     margin : 0 auto;
                 }
+
                 h2{
                     margin-right: 20px; 
                     font-size:24px;
                 }
+
                 h2:hover{
                     opacity:.7;
                 }
