@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 interface ListProps {
     item : List
@@ -6,7 +7,7 @@ interface ListProps {
 
 export default function ListItem ({ item } : ListProps) {
     return(
-        <>
+        <Link href="product/[id]" as={`product/${item.id}`}>
             <div className="list_item" key={item.id}>
                 <h4>{item.name}</h4>
                 <div className="list_item_img">
@@ -40,6 +41,6 @@ export default function ListItem ({ item } : ListProps) {
                 margin-bottom:40px;
                 }
             `}</style>
-        </>
+        </Link>
     )
 }
