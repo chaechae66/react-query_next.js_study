@@ -2,6 +2,7 @@ import { getList } from "../api/cosmeticAPI"
 import { dehydrate, QueryClient, useQuery } from '@tanstack/react-query';
 import Banner from "../components/Banner"
 import ListItem from "../components/ListItem";
+import styles from '../styles/common.module.css';
 
 export default function Home() {
   const { status, data, isSuccess, error } = useQuery({ queryKey: ['Lists'], queryFn: getList })
@@ -17,7 +18,7 @@ export default function Home() {
   return (
     <>
       <Banner />
-      <section>
+      <section className={styles.wrap}>
         {
           isSuccess && (<>{
             data.map((item)=>{
@@ -30,11 +31,6 @@ export default function Home() {
       </section>
       <style jsx>{`
         section{
-          width : 1200px;
-          min-height: 400px;
-          margin: 0 auto;
-          margin-top :80px;
-          margin-bottom:100px;
           display:flex;
           flex-wrap:wrap;
         }

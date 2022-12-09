@@ -17,7 +17,7 @@ export default function Header(){
         <>
             <div>
                 <header>
-                    <ActiveLink href="/">화장품</ActiveLink>
+                    <ActiveLink href="/">목록</ActiveLink>
                     <ActiveLink href="/about">소개</ActiveLink>
                 </header>
             </div>

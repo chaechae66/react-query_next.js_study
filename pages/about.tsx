@@ -1,5 +1,7 @@
+import styles from "../styles/common.module.css"
+
 export default function About(){
     return(
-        <h1>About</h1>
+        <main className={styles.wrap}>About</main>
     )
 }
