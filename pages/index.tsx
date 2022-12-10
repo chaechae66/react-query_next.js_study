@@ -38,15 +38,3 @@ export default function Home() {
     </>
   )
 }
-
-export async function getStaticProps() {
-  const queryClient = new QueryClient()
-
-  await queryClient.prefetchQuery(['Lists'], getList)
-
-  return {
-    props: {
-      dehydratedState: dehydrate(queryClient),
-    },
-  }
-}
