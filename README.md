@@ -38,6 +38,10 @@ Next.js에서는 Image 최적화를 위해 `<Image />` 라는 컴포넌트 태�
 ### 한 것
 1. React Query CSR로 바꿈 
 
+<i>2022.12.11</i>
+
+### 한 것
+1. stale time
+
 ### 앞으로 할 것
-1. React-Query에 중복 부분 글로벌로 빼기
-2. CSR SWR로 바꾸기
+1. 패럴랙스 스크롤링
